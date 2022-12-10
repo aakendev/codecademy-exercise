@@ -1,11 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import {
+  createBrowserRouter,
+  RouterProvider
+} from "react-router-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('cocaex'));
-root.render(
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <h1>AAKEN Developer</h1>,
+  }
+]);
+
+ReactDOM.createRoot(document.getElementById("cocaex")).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
